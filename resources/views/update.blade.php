@@ -68,6 +68,13 @@
                         </select>
                     </div>
                     <div class="mb-3">
+                        <label for="" class="form-label">Choose file</label>
+                        <input type="file" class="form-control" name="image" id="" placeholder="" aria-describedby="fileHelpId">
+                        @if($errors->has('image'))
+                        <span class="text-danger text-left">{{$errors->first('image')}}</span>
+                        @endif
+                      </div>
+                    <div class="mb-3">
                         <textarea name="contenu" id="editor">{!! $article->contenu !!}</textarea>
                     </div>
                     <div class="mb-3">
