@@ -12,7 +12,7 @@ class AdminController extends Controller
     }
     public function deconnexion(){
         session()->forget('id');
-        return redirect('/loginAdmin');
+        return redirect('/admin');
     }
     public function login(Request $request){
         $admin=new Administrateur();
@@ -25,6 +25,6 @@ class AdminController extends Controller
             return redirect('/');
         }
         else
-            return redirect('/loginAdmin');
+            return redirect('/admin');
     }
 }
