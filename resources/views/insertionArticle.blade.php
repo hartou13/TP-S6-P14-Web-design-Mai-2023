@@ -6,23 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insertion</title>
-    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
-    <link href="{{ asset('ckeditor/contents.css') }}" rel="stylesheet">
+    <script src="{{ secure_url('ckeditor/ckeditor.js') }}"></script>
+    <link href="{{ secure_url('ckeditor/contents.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href={{ asset('style/fonts/icomoon/style.css') }}>
+    <link rel="stylesheet" href={{ secure_url('style/fonts/icomoon/style.css') }}>
 
-    <link rel="stylesheet" href={{ asset('style/css/owl.carousel.min.css') }}>
+    <link rel="stylesheet" href={{ secure_url('style/css/owl.carousel.min.css') }}>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href={{ asset('style/css/bootstrap.min.css') }}>
+    <link rel="stylesheet" href={{ secure_url('style/css/bootstrap.min.css') }}>
     <!-- Style -->
-    <link rel="stylesheet" href={{ asset('style/css/style.css') }}>
+    <link rel="stylesheet" href={{ secure_url('style/css/style.css') }}>
 
 
 </head>
 
-<body style="background-image: url('{{ asset('style/images/wp.jpg') }}')">
+<body style="background-image: url('{{ secure_url('style/images/wp.jpg') }}')">
 
     <header class="site-navbar" role="banner">
         <div class="container">
@@ -90,7 +90,7 @@
         CKEDITOR.replace('contenu');
     </script>
 
-    <script src={{ asset('style/bootstrap/js/bootstrap.min.js') }}></script>
+    <script src={{ secure_url('style/bootstrap/js/bootstrap.min.js') }}></script>
 </body>
 
 </html>

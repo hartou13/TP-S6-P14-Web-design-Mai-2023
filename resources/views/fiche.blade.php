@@ -9,19 +9,19 @@
     <title>{{ $article->titre }}</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href={{ asset('style/fonts/icomoon/style.css') }}>
+    <link rel="stylesheet" href={{ secure_url('style/fonts/icomoon/style.css') }}>
 
-    <link rel="stylesheet" href={{ asset('style/css/owl.carousel.min.css') }}>
+    <link rel="stylesheet" href={{ secure_url('style/css/owl.carousel.min.css') }}>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href={{ asset('style/css/bootstrap.min.css') }}>
+    <link rel="stylesheet" href={{ secure_url('style/css/bootstrap.min.css') }}>
     <!-- Style -->
-    <link rel="stylesheet" href={{ asset('style/css/style.css') }}>
+    <link rel="stylesheet" href={{ secure_url('style/css/style.css') }}>
 
     <title>Website Menu #3</title>
 </head>
 
-<body style="background-image: url('{{ asset('style/images/wp.jpg') }}')">
+<body style="background-image: url('{{ secure_url('style/images/wp.jpg') }}')">
 
 
     <div class="site-mobile-menu">
@@ -62,7 +62,7 @@
                             class="icon-menu h3"></span></a></div>
                 <div style="width: 50%; margin: 5% auto">
                     <div class="card text-black  ">
-                        <img class="card-img-top" src={{asset('images/'.$article->img   )}} alt="Title">
+                        <img class="card-img-top" src={{secure_url('images/'.$article->img   )}} alt="Title">
                         <div class="card-body">
                             <h4 class="card-title">{{ $article->titre }}</h4>
                             <h2>{{ $article->resume }}</h2>
@@ -85,11 +85,11 @@
 
 
 
-    <script src={{ asset('style/js/jquery-3.3.1.min.js') }}></script>
-    <script src={{ asset('style/js/popper.min.js') }}></script>
-    <script src={{ asset('style/js/bootstrap.min.js') }}></script>
-    <script src={{ asset('style/js/jquery.sticky.js') }}></script>
-    <script src={{ asset('style/js/main.js') }}></script>
+    <script src={{ secure_url('style/js/jquery-3.3.1.min.js') }}></script>
+    <script src={{ secure_url('style/js/popper.min.js') }}></script>
+    <script src={{ secure_url('style/js/bootstrap.min.js') }}></script>
+    <script src={{ secure_url('style/js/jquery.sticky.js') }}></script>
+    <script src={{ secure_url('style/js/main.js') }}></script>
 </body>
 
 </html>
