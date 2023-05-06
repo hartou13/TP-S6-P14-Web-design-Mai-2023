@@ -4,11 +4,15 @@
 <head>
     <!-- Required meta tags -->
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-576BVBS');</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZXQH0MB4M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1ZXQH0MB4M');
+</script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -71,8 +75,8 @@
                             class="icon-menu h3"></span></a></div>
 
                 @foreach ($article as $art)
-                    <div class="col-xl-4" style="margin-top: 10px;">
-                        <div class="card text-white bg-primary" style="height: 300px;">
+                    <div class="col-xl-4" style="margin-top: 10px;"  style="height: 300px;">
+                        <div class="card text-white bg-primary">
                             <img style="height: 50%;" class="card-img-top" src={{"data:image/jpeg;base64,".$art->img}} alt="Title">
                             <div class="card-body">
                                 <h4 class="card-title">{{ $art->titre }}</h4>
