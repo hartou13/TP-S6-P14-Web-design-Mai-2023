@@ -76,11 +76,11 @@
 
                 @foreach ($article as $art)
                     <div class="col-xl-4" style="margin-top: 10px;"  style="height: 300px;">
-                        <div class="card text-white bg-primary">
+                        <div class="card text-white bg-dark ">
                             <img style="height: 50%;" class="card-img-top" src={{"data:image/jpeg;base64,".$art->img}} alt="Title">
                             <div class="card-body">
                                 <h4 class="card-title">{{ $art->titre }}</h4>
-                                <p class="card-text">
+                                <p class="card-text text-white">
                                     {{ $art->resume }}</p>
                                 <a name="" id="" class="btn btn-primary"
                                     href="/article/{{ $art->id }}-{{ $art['slug'] }}" role="button">Lire</a>

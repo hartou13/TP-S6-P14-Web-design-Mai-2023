@@ -56,7 +56,7 @@
             </div>
             <form action="/article" method="post" enctype="multipart/form-data">
                 @csrf
-                <div style="width: 50%; margin: 1% auto; padding: 1%" class="card text-white bg-primary">
+                <div style="width: 50%; margin: 1% auto; padding: 1%" class="card text-white bg-dark">
                     <h2>Insertion Article</h2>
                     <div class="mb-3">
                         <label for="" class="form-label">Titre</label>
