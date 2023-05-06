@@ -119,7 +119,7 @@ class ArticleController extends Controller
         if($request->image!=null){
             $filename=time().'.'.$request->image->extension();
             // $request->image->move(public_path('images'), $filename);
-            $contents = file_get_contents($$request->image->getRealPath());
+            $contents = file_get_contents($request->image->getRealPath());
             $base64 = base64_encode($contents);
             return $base64;
         }
