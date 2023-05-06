@@ -117,7 +117,7 @@ class ArticleController extends Controller
     }
     public function upload(ImageUploadRequest $request){
         $filename=time().'.'.$request->image->extension();
-        $request->image->move(url('images'), $filename);
+        $request->image->move(secure_url('images'), $filename);
         return $filename;
     }
 }
