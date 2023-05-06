@@ -62,7 +62,7 @@
                 @foreach ($article as $art)
                     <div class="col-xl-4" style="margin-top: 10px;">
                         <div class="card text-white bg-primary">
-                            <img class="card-img-top" src={{secure_url('images/'.$art->img   )}} alt="Title">
+                            <img class="card-img-top" src={{"data:image/jpeg;base64,".$art->img}} alt="Title">
                             <div class="card-body">
                                 <h4 class="card-title">{{ $art->titre }}</h4>
                                 <p class="card-text">
