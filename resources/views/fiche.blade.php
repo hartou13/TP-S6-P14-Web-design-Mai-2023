@@ -69,9 +69,9 @@
                         href="#" class="site-menu-toggle js-menu-toggle text-white"><span
                             class="icon-menu h3"></span></a></div>
                 <div style="width: 50%; margin: 5% auto" >
-                    <div class="card text-white bg-dark " >
+                    <div class="card text-white" >
                         <img class="card-img-top" src={{"data:image/jpeg;base64,".$article->img}} alt="Title">
-                        <div class="card-body">
+                        <div class="card-body bg-dark">
                             <h3 class="card-title">{{ $article->titre }}</h3>
                             <h4>{{ $article->resume }}</h4>
                             <h6>{{ $categorie->nomCategorie }}</h6>
