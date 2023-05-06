@@ -3,6 +3,13 @@
 
 <head>
     <!-- Required meta tags -->
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-576BVBS');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -21,6 +28,10 @@
 </head>
 
 <body style="background-image: url('{{ secure_url('style/images/wp.jpg') }}')">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-576BVBS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 
     <div class="site-mobile-menu">
@@ -61,7 +72,7 @@
 
                 @foreach ($article as $art)
                     <div class="col-xl-4" style="margin-top: 10px;">
-                        <div class="card text-white bg-primary">
+                        <div class="card text-white bg-primary" style="height: 300px;">
                             <img style="height: 50%;" class="card-img-top" src={{"data:image/jpeg;base64,".$art->img}} alt="Title">
                             <div class="card-body">
                                 <h4 class="card-title">{{ $art->titre }}</h4>
