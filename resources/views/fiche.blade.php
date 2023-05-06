@@ -68,8 +68,8 @@
                 <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3 row" style="position: relative; top: 3px;"><a
                         href="#" class="site-menu-toggle js-menu-toggle text-white"><span
                             class="icon-menu h3"></span></a></div>
-                <div style="width: 50%; margin: 5% auto">
-                    <div class="card text-black  ">
+                <div style="width: 50%; margin: 5% auto" class="bg-dark">
+                    <div class="card text-white  ">
                         <img class="card-img-top" src={{"data:image/jpeg;base64,".$article->img}} alt="Title">
                         <div class="card-body">
                             <h3 class="card-title">{{ $article->titre }}</h3>
