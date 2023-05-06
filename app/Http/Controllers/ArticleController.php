@@ -96,8 +96,8 @@ class ArticleController extends Controller
         $new['resume']=$request->input("resume");
         $new['categorie']=$request->input("cat");
         $new['contenu']=$request->input("contenu");
-        $new->img=$this->upload($upload);
         print_r($new);
+        $new->img=$this->upload($upload);
         $new->update();
         // $new->update();
         return redirect('/');
@@ -116,8 +116,10 @@ class ArticleController extends Controller
         return redirect('/');
     }
     public function upload(ImageUploadRequest $request){
-        $filename=time().'.'.$request->image->extension();
-        $request->image->move(secure_url('images'), $filename);
-        return $filename;
+        if($request->image!=null){
+            $filename=time().'.'.$request->image->extension();
+            $request->image->move(public_path('images'), $filename);
+            return $filename;
+        }
     }
 }
