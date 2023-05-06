@@ -64,8 +64,8 @@
                     <div class="card text-black  ">
                         <img class="card-img-top" src={{"data:image/jpeg;base64,".$article->img}} alt="Title">
                         <div class="card-body">
-                            <h4 class="card-title">{{ $article->titre }}</h4>
-                            <h2>{{ $article->resume }}</h2>
+                            <h3 class="card-title">{{ $article->titre }}</h3>
+                            <h4>{{ $article->resume }}</h4>
                             <h6>{{ $categorie->nomCategorie }}</h6>
                             <div style="font-color: white " id="content" class="text-white">
                                 <h6 style="color: red">{!! $article->contenu !!}</h6>

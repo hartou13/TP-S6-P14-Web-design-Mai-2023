@@ -64,7 +64,7 @@ class ArticleController extends Controller
     public function show($id)
     {
         $art=Article::find($id);
-        $cat=Categorie::find($art['categorie']);
+        $cat=Categorie::find($art->categorie);
         return view('fiche', ["article"=>$art, "categorie"=>$cat]);
     }
 
