@@ -69,7 +69,7 @@
                         href="#" class="site-menu-toggle js-menu-toggle text-white"><span
                             class="icon-menu h3"></span></a></div>
                 <div style="width: 50%; margin: 5% auto" >
-                    <div class="card text-white  " class="bg-dark">
+                    <div class="card text-white bg-dark " >
                         <img class="card-img-top" src={{"data:image/jpeg;base64,".$article->img}} alt="Title">
                         <div class="card-body">
                             <h3 class="card-title">{{ $article->titre }}</h3>
