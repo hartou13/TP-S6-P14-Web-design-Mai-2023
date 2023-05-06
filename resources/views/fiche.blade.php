@@ -62,7 +62,7 @@
                             class="icon-menu h3"></span></a></div>
                 <div style="width: 50%; margin: 5% auto">
                     <div class="card text-black  ">
-                        <img class="card-img-top" src={{"data:image/jpeg;base64,".$art->img}} alt="Title">
+                        <img class="card-img-top" src={{"data:image/jpeg;base64,".$article->img}} alt="Title">
                         <div class="card-body">
                             <h4 class="card-title">{{ $article->titre }}</h4>
                             <h2>{{ $article->resume }}</h2>
