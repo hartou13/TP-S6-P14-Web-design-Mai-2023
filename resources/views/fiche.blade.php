@@ -78,7 +78,7 @@
                         <div class="card-body bg-dark">
                             <h3 class="card-title">{{ $article->titre }}</h3>
                             <h4>{{ $article->resume }}</h4>
-                            <h6>{{ $categorie->nomCategorie }}</h6>
+                            <h6>{{ $categorie->nomcategorie }}</h6>
                             <div style="font-color: white " id="content" class="text-white">
                                 <h6 style="color: red">{!! $article->contenu !!}</h6>
                             </div>
