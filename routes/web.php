@@ -34,7 +34,7 @@ Route::get('/article/create', [ArticleController::class,"create"]);
 
 Route::middleware('cache.headers:public;max_age=3600;etag')->group(function () {
     Route::get('/styles/{any}', function ($mylink) {
-        $path = '/'.'ownStyle/' . $mylink;
+        $path = 'ownStyle/' . $mylink;
         // dd($mylink);
         $path=str_replace('/','\\',$path);
         dd(File::exists(($path)), public_path($path));
