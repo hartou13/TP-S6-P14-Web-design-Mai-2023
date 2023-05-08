@@ -18,22 +18,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>update</title>
-    <script src="{{ url('/ckeditor/ckeditor.js') }}"></script>
-    <link href="{{ url('/ckeditor/contents.css') }}" rel="stylesheet">
+    <script src="{{ secure_url('/ckeditor/ckeditor.js') }}"></script>
+    <link href="{{ secure_url('/ckeditor/contents.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href={{ url('/styles/fonts/icomoon/style.css') }}>
+    <link rel="stylesheet" href={{ secure_url('/styles/fonts/icomoon/style.css') }}>
 
-    <link rel="stylesheet" href={{ url('/styles/css/owl.carousel.min.css') }}>
+    <link rel="stylesheet" href={{ secure_url('/styles/css/owl.carousel.min.css') }}>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href={{ url('/styles/css/bootstrap.min.css') }}>
+    <link rel="stylesheet" href={{ secure_url('/styles/css/bootstrap.min.css') }}>
     <!-- Style -->
-    <link rel="stylesheet" href={{ url('/styles/css/style.css') }}>
+    <link rel="stylesheet" href={{ secure_url('/styles/css/style.css') }}>
 
 </head>
 
-<body style="background-image: url('{{ url('/styles/images/wp.jpg') }}')">
+<body style="background-image: url('{{ secure_url('/styles/images/wp.jpg') }}')">
     <header class="site-navbar" role="banner">
         <div class="container">
             <div class="row align-items-center">

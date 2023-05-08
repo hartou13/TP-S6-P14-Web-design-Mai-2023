@@ -22,19 +22,19 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href={{ url('/styles/fonts/icomoon/style.css') }}>
+    <link rel="stylesheet" href={{ secure_url('/styles/fonts/icomoon/style.css') }}>
 
-    <link rel="stylesheet" href={{ url('/styles/css/owl.carousel.min.css') }}>
+    <link rel="stylesheet" href={{ secure_url('/styles/css/owl.carousel.min.css') }}>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href={{ url('/styles/css/bootstrap.min.css') }}>
+    <link rel="stylesheet" href={{ secure_url('/styles/css/bootstrap.min.css') }}>
     <!-- Style -->
-    <link rel="stylesheet" href={{ url('/styles/css/style.css') }}>
+    <link rel="stylesheet" href={{ secure_url('/styles/css/style.css') }}>
 
     <title>Accueil</title>
 </head>
 
-<body style="background-image: url('{{ url('/styles/images/wp.jpg') }}')">
+<body style="background-image: url('{{ secure_url('/styles/images/wp.jpg') }}')">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-576BVBS" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
@@ -125,11 +125,11 @@
 
 
 
-    <script src={{ url('/styles/js/jquery-3.3.1.min.js') }}></script>
-    <script src={{ url('/styles/js/popper.min.js') }}></script>
-    <script src={{ url('/styles/js/bootstrap.min.js') }}></script>
-    <script src={{ url('/styles/js/jquery.sticky.js') }}></script>
-    <script src={{ url('/styles/js/main.js') }}></script>
+    <script src={{ secure_url('/styles/js/jquery-3.3.1.min.js') }}></script>
+    <script src={{ secure_url('/styles/js/popper.min.js') }}></script>
+    <script src={{ secure_url('/styles/js/bootstrap.min.js') }}></script>
+    <script src={{ secure_url('/styles/js/jquery.sticky.js') }}></script>
+    <script src={{ secure_url('/styles/js/main.js') }}></script>
 </body>
 
 </html>
