@@ -94,7 +94,7 @@
                     @foreach ($article as $art)
                         <div class="col-xl-4" style="margin-top: 10px;" style="height: 300px;">
                             <div class="card flex-fill text-white bg-dark ">
-                                <img style="height: 50%;" class="card-img-top"
+                                <img style="height: 50%;" class="card-img-top img-thumbnail"
                                     src={{ 'data:image/jpeg;base64,' . $art->img }} alt="Title">
                                 <div class="card-body">
                                     <h4 class="card-title">{{ $art->titre }}</h4>
