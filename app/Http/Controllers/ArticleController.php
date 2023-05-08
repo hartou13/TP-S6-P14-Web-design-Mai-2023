@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\Categorie;
 use App\Models\Article;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 use App\Http\Requests\ImageUploadRequest;
+// use App\Http\Controllers\Cache;
 
 class ArticleController extends Controller
 {
@@ -19,7 +21,17 @@ class ArticleController extends Controller
     public function index()
     {
         $art=new Article();
-        $liste=$art->all();
+        $liste=Article::paginate(2);
+        foreach ($liste as $key => $value) {
+            $value['slug']=Str::slug($value->titre);
+        }
+        return view('card', ["article"=>$liste]);
+    }
+
+    public function recherche(Request $request){
+        $recherche=$request->input("search");
+        $recherche="%".$recherche."%";
+        $liste=Article::where('titre', 'like', $recherche)->orWhere('resume','like', $recherche)->paginate(2);
         foreach ($liste as $key => $value) {
             $value['slug']=Str::slug($value->titre);
         }
@@ -63,9 +75,14 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        $art=Article::find($id);
-        $cat=Categorie::find($art->categorie);
-        return view('fiche', ["article"=>$art, "categorie"=>$cat]);
+        if(!Cache::has('showarticle-'.$id)){
+            $art=Article::find($id);
+            $cat=Categorie::find($art->categorie);
+            $view=view('fiche', ["article"=>$art, "categorie"=>$cat])->render();
+            Cache::put('showarticle-'.$id, $view);
+        }
+
+        return Cache::get('showarticle-'.$id);
     }
 
     /**
@@ -89,7 +106,7 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, ImageUploadRequest $upload)
     {
         $new=Article::find($id);
         $new['titre']=$request->input("titre");
@@ -100,6 +117,10 @@ class ArticleController extends Controller
         $new->img=$this->upload($upload);
         $new->update();
         // $new->update();
+         if(Cache::has('showarticle-'.$id)){
+
+            Cache::forget('showarticle-'.$id);
+        }
         return redirect('/');
     }
 

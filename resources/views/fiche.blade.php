@@ -1,14 +1,18 @@
 <!doctype html>
 <html lang="en">
 
-<head><!-- Google tag (gtag.js) -->
+<head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZXQH0MB4M"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'G-1ZXQH0MB4M');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1ZXQH0MB4M');
     </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,19 +21,19 @@
     <title>{{ $article->titre }}</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href={{ secure_url('style/fonts/icomoon/style.css') }}>
+    <link rel="stylesheet" href={{ url('/styles/fonts/icomoon/style.css') }}>
 
-    <link rel="stylesheet" href={{ secure_url('style/css/owl.carousel.min.css') }}>
+    <link rel="stylesheet" href={{ url('/styles/css/owl.carousel.min.css') }}>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href={{ secure_url('style/css/bootstrap.min.css') }}>
+    <link rel="stylesheet" href={{ url('/styles/css/bootstrap.min.css') }}>
     <!-- Style -->
-    <link rel="stylesheet" href={{ secure_url('style/css/style.css') }}>
+    <link rel="stylesheet" href={{ url('/styles/css/style.css') }}>
 
     <title>Website Menu #3</title>
 </head>
 
-<body style="background-image: url('{{ secure_url('style/images/wp.jpg') }}')">
+<body style="background-image: url('{{ url('/styles/images/wp.jpg') }}')">
 
 
     <div class="site-mobile-menu">
@@ -68,9 +72,9 @@
                 <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3 row" style="position: relative; top: 3px;"><a
                         href="#" class="site-menu-toggle js-menu-toggle text-white"><span
                             class="icon-menu h3"></span></a></div>
-                <div style="width: 50%; margin: 5% auto" >
-                    <div class="card text-white" >
-                        <img class="card-img-top" src={{"data:image/jpeg;base64,".$article->img}} alt="Title">
+                <div style="width: 50%; margin: 5% auto">
+                    <div class="card text-white">
+                        <img class="card-img-top" src={{ 'data:image/jpeg;base64,' . $article->img }} alt="Title">
                         <div class="card-body bg-dark">
                             <h3 class="card-title">{{ $article->titre }}</h3>
                             <h4>{{ $article->resume }}</h4>
@@ -93,11 +97,11 @@
 
 
 
-    <script src={{ secure_url('style/js/jquery-3.3.1.min.js') }}></script>
-    <script src={{ secure_url('style/js/popper.min.js') }}></script>
-    <script src={{ secure_url('style/js/bootstrap.min.js') }}></script>
-    <script src={{ secure_url('style/js/jquery.sticky.js') }}></script>
-    <script src={{ secure_url('style/js/main.js') }}></script>
+    <script src={{ url('/styles/js/jquery-3.3.1.min.js') }}></script>
+    <script src={{ url('/styles/js/popper.min.js') }}></script>
+    <script src={{ url('/styles/js/bootstrap.min.js') }}></script>
+    <script src={{ url('/styles/js/jquery.sticky.js') }}></script>
+    <script src={{ url('/styles/js/main.js') }}></script>
 </body>
 
 </html>
