@@ -21,7 +21,7 @@ class ArticleController extends Controller
     public function index()
     {
         $art=new Article();
-        $liste=Article::paginate(2);
+        $liste=Article::paginate(3);
         foreach ($liste as $key => $value) {
             $value['slug']=Str::slug($value->titre);
         }
