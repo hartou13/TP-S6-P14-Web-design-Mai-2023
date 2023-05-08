@@ -98,8 +98,8 @@
                                     src={{ 'data:image/jpeg;base64,' . $art->img }} alt="Title">
                                 <div class="card-body">
                                     <h4 class="card-title">{{ $art->titre }}</h4>
-                                    <p class="card-text text-white">
-                                        {{ $art->resume }}</p>
+                                    <h5 class="card-text text-white">
+                                        {{ $art->resume }}</h5>
                                     <a name="" id="" class="btn btn-primary"
                                         href="/article/{{ $art->id }}-{{ $art['slug'] }}" role="button">Lire</a>
                                     @if (session()->get('id') != null)
