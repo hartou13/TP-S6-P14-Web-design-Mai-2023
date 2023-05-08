@@ -34,10 +34,10 @@ Route::get('/article/create', [ArticleController::class,"create"]);
 
 Route::middleware('cache.headers:public;max_age=3600;etag')->group(function () {
     Route::get('/styles/{any}', function ($mylink) {
-        $path = 'ownStyle/' . $mylink;
+        $path = 'public/ownStyle/' . $mylink;
         // dd($mylink);
         $path=str_replace('/','\\',$path);
-        dd(File::exists(public_path($path)), public_path($path));
+        dd(File::exists(($path)), ($path));
         if (File::exists(($path))) {
             $contentType=(new MymeType())->mime_type($path);
             $response = new Illuminate\Http\Response(File::get(($path)), 200);
